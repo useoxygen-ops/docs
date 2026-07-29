@@ -198,5 +198,11 @@
   },
   "markdown": {
     "schema": true
-  }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/pulse/overview"
+    }
+  ]
 }
