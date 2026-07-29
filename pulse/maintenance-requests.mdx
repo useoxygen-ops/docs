@@ -1,8 +1,87 @@
 ---
 title: Solicitudes de Mantenimiento
-description: Próximamente
+description: Los operadores reportan fallas o necesidades. El supervisor las convierte en órdenes de trabajo.
 ---
 
-# Solicitudes de Mantenimiento
+## ¿Qué es una Solicitud de Mantenimiento?
 
-Contenido en construcción.
+Una solicitud es el mecanismo por el cual cualquier persona (operador, supervisor de producción, jefe de área) puede reportar una necesidad de mantenimiento sin necesidad de crear una orden directamente.
+
+El flujo típico es:
+1. Un operador detecta una falla o anomalía en un equipo
+2. Crea una solicitud describiendo el problema
+3. El área de mantenimiento la evalúa y decide si crear una orden de trabajo
+
+Esto separa el **reporte del problema** de la **planificación del trabajo**, lo que le da al equipo de mantenimiento control sobre cómo y cuándo atender cada solicitud.
+
+{/* TODO: screenshot — lista de solicitudes de mantenimiento */}
+
+## Ciclo de vida
+
+```
+Pendiente → En progreso → Completada
+                       ↘ Rechazada
+```
+
+| Estado | Descripción |
+|---|---|
+| **Pendiente** | Solicitud creada, aún no atendida |
+| **En progreso** | Se creó una orden de trabajo vinculada |
+| **Completada** | La orden vinculada fue completada |
+| **Rechazada** | El área de mantenimiento decidió no atenderla (con razón) |
+
+## Crear una solicitud
+
+<Steps>
+  <Step title="Ir a Gestión de Mantenimiento > Solicitudes">
+    Hacé clic en **Nueva solicitud**.
+  </Step>
+  <Step title="Describir el problema">
+    Escribí una descripción clara de la falla o necesidad. Sé específico: qué pasó, cuándo empezó, cómo afecta la operación.
+  </Step>
+  <Step title="Seleccionar el activo">
+    Indicá qué equipo está afectado.
+  </Step>
+  <Step title="Prioridad y urgencia">
+    Asigná una prioridad e indicá si el **equipo está detenido**. Este campo es clave para que mantenimiento priorice la atención.
+  </Step>
+  <Step title="Adjuntar evidencia (opcional)">
+    Podés adjuntar fotos o documentos que ayuden a entender el problema.
+  </Step>
+  <Step title="Enviar">
+    La solicitud queda en estado **Pendiente** y el equipo de mantenimiento la ve en su lista.
+  </Step>
+</Steps>
+
+{/* TODO: screenshot — formulario de creación de solicitud */}
+
+## Campos de la solicitud
+
+| Campo | Descripción |
+|---|---|
+| **Descripción** | Detalle del problema o necesidad reportada |
+| **Activo** | Equipo afectado |
+| **Prioridad** | Baja, media, alta o crítica |
+| **Equipo detenido** | Indica si la falla impide operar el equipo (afecta la priorización) |
+| **Adjuntos** | Fotos, videos o documentos de evidencia |
+| **Campos personalizados** | Atributos adicionales configurados para tu empresa |
+
+## Gestionar solicitudes (supervisor de mantenimiento)
+
+Desde la lista de solicitudes podés:
+
+- **Crear orden de trabajo** — convertís la solicitud en una orden con todos sus datos precargados
+- **Rechazar** — si la solicitud no corresponde o ya fue atendida por otra vía. Debés ingresar el motivo del rechazo, que queda visible para quien la creó
+- **Exportar** — exportá la lista de solicitudes a Excel para análisis
+
+<Note>
+  Cuando rechazás una solicitud, el solicitante puede ver el motivo. Usá un mensaje claro y constructivo.
+</Note>
+
+## Ver la orden vinculada
+
+Desde el detalle de una solicitud en estado **En progreso** podés ver directamente la orden de trabajo que se creó a partir de ella: su identificador, estado actual y técnico asignado.
+
+<Tip>
+  Usá las solicitudes para que los operadores de producción reporten problemas sin acceso al módulo completo de mantenimiento. Es el canal formal de comunicación entre producción y mantenimiento.
+</Tip>

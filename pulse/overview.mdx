@@ -3,23 +3,76 @@ title: Inicio
 description: Gestión de mantenimiento industrial con Oxygen Pulse
 ---
 
-# Pulse
+## ¿Qué es Pulse?
 
-Pulse es el módulo de gestión de mantenimiento (CMMS) de Oxygen Suite. Permite gestionar órdenes de trabajo, activos industriales, planes preventivos y equipos de mantenimiento.
+Pulse es el módulo de gestión de mantenimiento (CMMS) de Oxygen Suite. Te permite controlar todo el ciclo de vida del mantenimiento industrial: desde que un técnico reporta una falla hasta que el supervisor aprueba el trabajo completado.
 
-## Módulos principales
+Con Pulse podés:
+
+- Registrar y gestionar **órdenes de mantenimiento** correctivas, preventivas, de inspección y de mejora
+- Crear **planes preventivos** que generan órdenes automáticamente según calendario, uso o condición del activo
+- Administrar tu **inventario de repuestos** y controlar el consumo por orden
+- Hacer seguimiento de **activos** con indicadores de confiabilidad (MTTR, MTBF)
+- Organizar tu **personal técnico** en equipos con horarios y costos por hora
+- Analizar el desempeño operativo con **dashboards** y reportes personalizados
+
+{/* TODO: screenshot — vista general del dashboard de Pulse */}
+
+## Módulos
 
 <CardGroup cols={2}>
-  <Card title="Órdenes de Trabajo" icon="wrench" href="/pulse/maintenance-orders">
-    Crea y gestiona órdenes de mantenimiento correctivo y preventivo
+  <Card title="Órdenes de Mantenimiento" icon="wrench" href="/pulse/maintenance-orders">
+    Creá, ejecutá y finalizá órdenes de trabajo correctivas, preventivas, de inspección y de mejora.
   </Card>
-  <Card title="Activos" icon="building-factory" href="/pulse/assets">
-    Jerarquía de activos industriales según ISA-95
+  <Card title="Planes Preventivos" icon="rotate" href="/pulse/preventive-plans">
+    Automatizá la generación de órdenes por calendario, uso acumulado o condición del activo.
   </Card>
-  <Card title="Planes Preventivos" icon="calendar" href="/pulse/preventive-plans">
-    Programa mantenimientos recurrentes automáticamente
+  <Card title="Solicitudes de Mantenimiento" icon="clipboard-list" href="/pulse/maintenance-requests">
+    Los operadores reportan fallas o necesidades. El supervisor las convierte en órdenes.
   </Card>
-  <Card title="Modos de Falla" icon="triangle-exclamation" href="/pulse/failure-modes">
-    Catálogo de fallas por tipo de activo
+  <Card title="Grupos de Tareas" icon="list-check" href="/pulse/task-groups">
+    Plantillas reutilizables de tareas para agilizar la creación de órdenes y planes.
+  </Card>
+  <Card title="Activos" icon="cube" href="/pulse/assets">
+    Registro de equipos con jerarquía, parámetros, indicadores KPI y propiedades personalizadas.
+  </Card>
+  <Card title="Árbol Jerárquico" icon="sitemap" href="/pulse/asset-tree">
+    Visualización de la estructura de ubicaciones y activos de tu planta.
+  </Card>
+  <Card title="Ubicaciones" icon="building" href="/pulse/locations">
+    Define la estructura física de tu planta: plantas, líneas, sectores y puestos de trabajo.
+  </Card>
+  <Card title="Inventario" icon="box" href="/pulse/inventory">
+    Catálogo de repuestos y materiales con stock mínimo/máximo y trazabilidad de uso.
+  </Card>
+  <Card title="Personal" icon="users" href="/pulse/staff">
+    Técnicos con horarios, costo por hora y membresía a equipos.
+  </Card>
+  <Card title="Equipos" icon="people-group" href="/pulse/teams">
+    Agrupá técnicos en equipos para asignarlos rápidamente a órdenes.
+  </Card>
+  <Card title="Dashboards" icon="chart-bar" href="/pulse/dashboards">
+    KPIs, gráficos de tendencias, ranking de activos y reportes personalizables.
+  </Card>
+  <Card title="Configuración" icon="gear" href="/pulse/units">
+    Unidades de medida y modos de falla usados en todo el módulo.
   </Card>
 </CardGroup>
+
+## Flujo típico de trabajo
+
+```
+Solicitud de mantenimiento
+        ↓
+Orden de mantenimiento creada
+        ↓
+Técnico ejecuta (registra tiempo, tareas, materiales)
+        ↓
+Supervisor aprueba y cierra
+        ↓
+KPIs actualizados en dashboards
+```
+
+<Tip>
+  Antes de crear tus primeras órdenes, configurá los [activos](/pulse/assets), [ubicaciones](/pulse/locations) y [personal](/pulse/staff). Esto te permite asignar y filtrar todo correctamente desde el inicio.
+</Tip>

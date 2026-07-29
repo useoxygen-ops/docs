@@ -1,30 +1,169 @@
 ---
-title: Órdenes de Trabajo
-description: Crea y gestiona órdenes de mantenimiento en Pulse
+title: Órdenes de Mantenimiento
+description: Creá, ejecutá y finalizá órdenes de trabajo correctivas, preventivas, de inspección y de mejora.
 ---
 
-# Órdenes de Trabajo
+## ¿Qué es una Orden de Mantenimiento?
 
-Las órdenes de trabajo son el centro de Pulse. Representan una tarea de mantenimiento desde su creación hasta su cierre.
+Una orden de mantenimiento es el documento central de trabajo en Pulse. Registra qué se hizo, quién lo hizo, cuánto tiempo tomó, qué materiales se usaron y cuál fue el resultado. Cada orden tiene un ciclo de vida completo desde su creación hasta su cierre.
 
-## Estados
+{/* TODO: screenshot — vista lista de órdenes */}
 
-Una orden de trabajo pasa por los siguientes estados en orden:
+## Tipos de órdenes
+
+| Tipo | Cuándo usarlo |
+|---|---|
+| **Correctiva** | Falla ya ocurrida — el equipo dejó de funcionar o funciona mal |
+| **Preventiva** | Mantenimiento planificado para evitar fallas |
+| **Inspección** | Revisión para evaluar el estado del equipo sin intervención correctiva |
+| **Mejora** | Modificación para mejorar la performance o seguridad del equipo |
+
+## Ciclo de vida
+
+```
+Pendiente → En progreso → Pausada → En progreso → Pendiente de aprobación → Completada
+```
+
+| Estado | Descripción |
+|---|---|
+| **Pendiente** | Orden creada, aún no iniciada |
+| **En progreso** | Técnico trabajando activamente |
+| **Pausada** | Trabajo detenido temporalmente (espera de repuesto, turno, etc.) |
+| **Pendiente de aprobación** | Trabajo terminado, espera validación del supervisor |
+| **Completada** | Supervisor aprobó el cierre |
+
+<Note>
+  Si la orden no requiere aprobación, pasa directamente de "En progreso" a "Completada" al finalizarla.
+</Note>
+
+{/* TODO: screenshot — diagrama de estados o vista de estado en la orden */}
+
+## Crear una orden
 
 <Steps>
-  <Step title="Borrador">Creada pero no enviada al equipo de mantenimiento</Step>
-  <Step title="Pendiente">Esperando asignación de técnico o inicio</Step>
-  <Step title="En progreso">Técnico trabajando activamente</Step>
-  <Step title="Pausada">Detenida temporalmente (falta de repuestos, espera de aprobación)</Step>
-  <Step title="Completada">Trabajo finalizado y cerrado</Step>
+  <Step title="Ir a Gestión de Mantenimiento > Órdenes de Trabajo">
+    Hacé clic en **Nueva orden** (botón superior derecho).
+  </Step>
+  <Step title="Completar los campos principales">
+    Completá título, tipo, prioridad, activo y ubicación. Estos campos son obligatorios para identificar el trabajo.
+  </Step>
+  <Step title="Definir fechas y tiempo estimado">
+    Ingresá la fecha de inicio y fin planificadas, y el tiempo de ejecución estimado en horas.
+  </Step>
+  <Step title="Agregar trabajadores">
+    Asigná uno o más técnicos del personal disponible. Podés asignar equipos completos.
+  </Step>
+  <Step title="Agregar tareas (opcional)">
+    Las tareas son los pasos específicos del trabajo. Podés escribirlas manualmente o importarlas desde un [Grupo de Tareas](/pulse/task-groups).
+  </Step>
+  <Step title="Agregar materiales (opcional)">
+    Seleccioná los repuestos o materiales del [inventario](/pulse/inventory) que se van a usar.
+  </Step>
+  <Step title="Guardar">
+    La orden queda en estado **Pendiente** lista para ser ejecutada.
+  </Step>
 </Steps>
 
-## Crear una orden de trabajo
+{/* TODO: screenshot — formulario de creación de orden */}
+
+## Campos de la orden
+
+| Campo | Descripción |
+|---|---|
+| **Título** | Descripción corta del trabajo a realizar |
+| **Tipo** | Correctiva, preventiva, inspección o mejora |
+| **Prioridad** | Baja, media, alta o crítica |
+| **Activo** | Equipo sobre el que se trabaja |
+| **Ubicación** | Dónde se realiza el trabajo |
+| **Fecha inicio/fin planificada** | Ventana de tiempo programada |
+| **Tiempo de ejecución** | Horas estimadas de trabajo |
+| **Tipo de falla** | Mecánica, eléctrica, neumática, etc. (para correctivas) |
+| **Causa de falla** | Razón detrás de la falla (para correctivas) |
+| **Trabajadores** | Técnicos asignados |
+| **Tareas** | Lista de pasos del trabajo |
+| **Sub-órdenes** | Órdenes hijas relacionadas |
+| **Materiales** | Repuestos e insumos a usar |
+| **Campos personalizados** | Atributos adicionales configurados para tu empresa |
+| **Requiere aprobación** | Si está activo, el supervisor debe aprobar el cierre |
+
+## Ejecutar una orden
+
+Cuando un técnico comienza a trabajar:
 
 <Steps>
-  <Step title="Ir a Órdenes de Trabajo">Ve a **Pulse → Órdenes de Trabajo → Nueva orden**</Step>
-  <Step title="Seleccionar activo">Selecciona el activo afectado en la jerarquía</Step>
-  <Step title="Describir el trabajo">Describe el trabajo a realizar y asigna prioridad</Step>
-  <Step title="Asignar técnico">Selecciona el técnico responsable</Step>
-  <Step title="Guardar o enviar">Guarda como borrador o envía directamente a pendiente</Step>
+  <Step title="Abrir la orden y presionar Iniciar">
+    La orden pasa a estado **En progreso** y se registra la hora de inicio real.
+  </Step>
+  <Step title="Completar tareas">
+    Marcá cada tarea como completada a medida que avanzás. Podés agregar notas por tarea.
+  </Step>
+  <Step title="Registrar materiales usados">
+    Si se usaron repuestos, registrá la cantidad real consumida. Esto descuenta del inventario.
+  </Step>
+  <Step title="Pausar si es necesario">
+    Si hay que detener el trabajo (espera de repuesto, fin de turno), presioná **Pausar**. Podés reanudar después.
+  </Step>
 </Steps>
+
+{/* TODO: screenshot — vista de ejecución de orden con tareas */}
+
+## Finalizar una orden
+
+<Steps>
+  <Step title="Presionar Finalizar">
+    Registrá el tiempo real trabajado y cualquier observación final.
+  </Step>
+  <Step title="Si requiere aprobación">
+    La orden pasa a **Pendiente de aprobación**. El supervisor puede revisar y aprobar o rechazar.
+  </Step>
+  <Step title="Aprobación del supervisor">
+    El supervisor revisa el trabajo, puede agregar comentarios y aprueba o rechaza. Si rechaza, vuelve a **En progreso**.
+  </Step>
+  <Step title="Orden completada">
+    Los KPIs del activo (MTTR, MTBF) se actualizan automáticamente.
+  </Step>
+</Steps>
+
+## Vistas disponibles
+
+### Vista lista
+La vista por defecto. Filtrá por activo, equipo, ubicación, estado, tipo, prioridad y rango de fechas. Exportá el resultado a PDF.
+
+### Vista calendario
+Visualizá las órdenes en un calendario semanal o mensual. Arrastrá para reprogramar. El panel de backlog muestra órdenes sin fecha asignada.
+
+{/* TODO: screenshot — vista calendario de órdenes */}
+
+### Vista Workload
+Mostrá la carga de trabajo por técnico en un período. Útil para detectar sobrecargas o capacidad disponible antes de asignar nuevas órdenes.
+
+{/* TODO: screenshot — vista workload por técnico */}
+
+## Sub-órdenes
+
+Una orden puede tener sub-órdenes para dividir el trabajo en partes independientes. Por ejemplo: una revisión general puede tener sub-órdenes para la parte eléctrica y para la parte mecánica.
+
+- Las sub-órdenes tienen su propio ciclo de vida
+- Se crean desde la pestaña **Sub-órdenes** dentro de la orden
+
+## Acciones masivas
+
+Desde la vista lista, seleccioná múltiples órdenes para:
+- **Eliminar en masa** — solo disponible en órdenes en estado Pendiente
+- **Reprogramar en masa** — mover las fechas de múltiples órdenes a la vez
+
+## Exportar a PDF
+
+Desde el detalle de cualquier orden, el botón **Descargar PDF** genera un documento con todos los datos: campos, tareas, trabajadores, materiales y espacio para firma.
+
+## Sugerencias de tareas con IA
+
+Al crear una orden, podés usar **Sugerir tareas** para que la IA genere una lista de pasos basada en el tipo de trabajo y el activo. Revisá las sugerencias y aceptá o descartá las que correspondan.
+
+<Tip>
+  Usá los [Grupos de Tareas](/pulse/task-groups) para trabajos repetitivos. Es más rápido que escribir las tareas cada vez y garantiza consistencia entre técnicos.
+</Tip>
+
+<Tip>
+  Activá **Requiere aprobación** en órdenes correctivas de alta criticidad para asegurar revisión del supervisor antes de dar el equipo por reparado.
+</Tip>

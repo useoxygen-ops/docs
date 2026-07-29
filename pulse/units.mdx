@@ -1,8 +1,43 @@
 ---
 title: Unidades de Medida
-description: Próximamente
+description: Catálogo de unidades usadas en parámetros de activos y materiales del inventario.
 ---
 
-# Unidades de Medida
+## ¿Qué son las Unidades de Medida?
 
-Contenido en construcción.
+Las unidades de medida son el catálogo de referencia que se usa en dos lugares de Pulse:
+- **Parámetros de activos** — para definir en qué unidad se mide el valor (°C, bar, rpm, horas, etc.)
+- **Materiales del inventario** — para indicar cómo se cuantifica el material (litros, kg, unidades, metros, etc.)
+
+{/* TODO: screenshot — lista de unidades de medida */}
+
+## Crear una unidad de medida
+
+<Steps>
+  <Step title="Ir a Configuración > Unidades de Medida">
+    Hacé clic en **Nueva unidad**.
+  </Step>
+  <Step title="Nombre y símbolo">
+    Ingresá el nombre completo (ej. "Grados Celsius") y el símbolo abreviado (ej. "°C").
+  </Step>
+  <Step title="Guardar">
+    La unidad queda disponible para seleccionar en parámetros y materiales.
+  </Step>
+</Steps>
+
+## Ejemplos de unidades comunes
+
+| Nombre | Símbolo | Uso típico |
+|---|---|---|
+| Grados Celsius | °C | Temperatura de equipos |
+| Bar | bar | Presión de sistemas hidráulicos/neumáticos |
+| Revoluciones por minuto | rpm | Velocidad de motores |
+| Horas | h | Horas de operación acumuladas |
+| Kilogramos | kg | Materiales a granel |
+| Litros | L | Lubricantes y fluidos |
+| Unidades | u | Repuestos individuales |
+| Metros | m | Cables, correas, tuberías |
+
+<Note>
+  Las unidades de medida son datos de configuración global. Cualquier cambio afecta a todos los parámetros y materiales que las usen.
+</Note>

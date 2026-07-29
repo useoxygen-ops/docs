@@ -1,8 +1,59 @@
 ---
 title: Grupos de Tareas
-description: Próximamente
+description: Plantillas reutilizables de tareas para agilizar la creación de órdenes y planes preventivos.
 ---
 
-# Grupos de Tareas
+## ¿Qué es un Grupo de Tareas?
 
-Contenido en construcción.
+Un grupo de tareas es una plantilla predefinida con una lista de pasos de trabajo. Cuando creás una orden de mantenimiento o un plan preventivo, podés importar un grupo de tareas en lugar de escribir las tareas una por una.
+
+**Beneficios:**
+- Ahorrás tiempo en trabajos repetitivos (cambio de aceite, revisión mensual, etc.)
+- Garantizás que todos los técnicos sigan el mismo procedimiento
+- Actualizás el procedimiento en un solo lugar y se aplica a todas las órdenes futuras
+
+{/* TODO: screenshot — lista de grupos de tareas */}
+
+## Crear un grupo de tareas
+
+<Steps>
+  <Step title="Ir a Gestión de Mantenimiento > Grupos de Tareas">
+    Hacé clic en **Nuevo grupo**.
+  </Step>
+  <Step title="Nombrar el grupo">
+    Usá un nombre descriptivo que identifique el tipo de trabajo. Por ejemplo: "Mantenimiento preventivo compresor", "Revisión sistema hidráulico".
+  </Step>
+  <Step title="Agregar tareas">
+    Por cada tarea ingresá:
+    - **Descripción** — qué hay que hacer
+    - **Tipo** — categoría de la tarea (inspección, limpieza, lubricación, ajuste, etc.)
+    - **Detalle** — instrucciones adicionales o criterio de aceptación
+    - **Tiempo estimado** — horas esperadas para completar esa tarea
+    - **Orden** — posición en la secuencia de trabajo
+  </Step>
+  <Step title="Guardar">
+    El grupo queda disponible para usarse en cualquier orden o plan preventivo.
+  </Step>
+</Steps>
+
+{/* TODO: screenshot — formulario de creación de grupo de tareas */}
+
+## Usar un grupo en una orden o plan
+
+Al crear o editar una orden de mantenimiento o un plan preventivo:
+
+1. En la sección **Tareas**, buscá la opción **Importar desde grupo**
+2. Seleccioná el grupo de tareas que corresponde al trabajo
+3. Las tareas se copian a la orden — a partir de ese momento son independientes del grupo y podés modificarlas sin afectar el original
+
+<Note>
+  Las tareas se copian al momento de importar. Si después editás el grupo original, las órdenes ya creadas no se actualizan automáticamente.
+</Note>
+
+## Duplicar un grupo
+
+Desde la lista de grupos podés duplicar uno existente para crear una variante. Útil cuando tenés procedimientos similares con pequeñas diferencias (ej. revisión mensual vs. revisión trimestral).
+
+<Tip>
+  Creá grupos de tareas para cada tipo de mantenimiento recurrente antes de empezar a cargar órdenes. Es una de las configuraciones más rentables en tiempo a largo plazo.
+</Tip>

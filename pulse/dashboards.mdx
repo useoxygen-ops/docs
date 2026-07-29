@@ -1,8 +1,93 @@
 ---
 title: Dashboards
-description: Próximamente
+description: KPIs de mantenimiento, análisis de fallas, tendencias y reportes personalizables.
 ---
 
-# Dashboards
+## ¿Qué encontrás en los Dashboards?
 
-Contenido en construcción.
+Pulse tiene dos tipos de vistas analíticas:
+
+1. **Dashboard principal** — vista fija con los KPIs y gráficos más importantes del mantenimiento
+2. **Reportes personalizados** — dashboards configurables donde podés elegir qué métricas mostrar y cómo
+
+{/* TODO: screenshot — dashboard principal de Pulse */}
+
+## Dashboard principal
+
+### Filtros
+
+Podés filtrar todos los indicadores del dashboard por:
+- **Rango de fechas** — con presets rápidos (último mes, último trimestre, último año, etc.)
+- **Activos** — enfocarte en equipos específicos
+- **Ubicaciones** — analizar por área o sector de la planta
+
+### KPIs del encabezado
+
+La fila superior muestra los indicadores clave del período seleccionado, comparados con el período anterior:
+
+| KPI | Descripción |
+|---|---|
+| **Órdenes totales** | Cantidad de órdenes en el período |
+| **Tiempo de paro** | Horas totales de equipo detenido por mantenimiento correctivo |
+| **Horas hombre** | Total de horas trabajadas por el equipo de mantenimiento |
+| **Costo total** | Costo de mano de obra + materiales (requiere permiso) |
+
+La flecha al lado de cada valor indica si mejoró o empeoró respecto al período anterior.
+
+### Gráficos disponibles
+
+| Gráfico | Qué muestra |
+|---|---|
+| **Órdenes por estado** | Distribución actual: pendientes, en progreso, completadas |
+| **Órdenes por tipo** | Correctivas vs preventivas vs inspección vs mejora |
+| **Órdenes por mes** | Tendencia mensual de órdenes por tipo |
+| **Tiempo de paro** | Evolución del tiempo de paro en el tiempo |
+| **Horas hombre por mes** | Tendencia de horas trabajadas por tipo de mantenimiento |
+| **Horas hombre por tipo** | Distribución del esfuerzo por tipo de orden |
+| **Costo por tipo** | Distribución de costos por tipo de mantenimiento |
+| **Costo por componente** | Qué activos o sistemas generan más costo |
+| **Fallas por causa** | Análisis de causas raíz de fallas |
+| **Fallas por tipo** | Distribución por tipo de falla (mecánica, eléctrica, etc.) |
+| **Top activos correctivos** | Ranking de equipos con más órdenes correctivas |
+| **MTBF ranking** | Mejores y peores equipos por tiempo medio entre fallas |
+| **Diagrama de Pareto** | 20% de activos que generan el 80% de las fallas |
+
+{/* TODO: screenshot — gráfico de Pareto de activos */}
+
+### Exportar a PDF
+
+El botón **Exportar PDF** genera un reporte con todos los gráficos y KPIs del dashboard en el período y filtros seleccionados. Útil para presentaciones de gestión o reportes de turno.
+
+## Reportes personalizados
+
+Además del dashboard fijo, podés crear dashboards personalizados con los indicadores que más te interesan.
+
+### Crear un reporte
+
+<Steps>
+  <Step title="Ir a Dashboards > Nuevo dashboard">
+    Asigná un nombre y configurá los permisos de acceso (por rol o usuario específico).
+  </Step>
+  <Step title="Agregar widgets">
+    Desde el constructor de reportes, seleccioná los KPIs y gráficos del catálogo disponible.
+  </Step>
+  <Step title="Configurar cada widget">
+    Para cada widget definí los filtros, el período y el tipo de visualización (tabla, gráfico de barras, donut, línea, etc.).
+  </Step>
+  <Step title="Organizar el layout">
+    Arrastrá y reorganizá los widgets en el dashboard. Podés redimensionarlos según la importancia.
+  </Step>
+  <Step title="Guardar y compartir">
+    El dashboard queda guardado y visible para los usuarios con acceso.
+  </Step>
+</Steps>
+
+{/* TODO: screenshot — constructor de reportes personalizado */}
+
+<Tip>
+  Creá dashboards específicos para cada audiencia: uno para el supervisor de turno (enfocado en órdenes del día), otro para el jefe de mantenimiento (KPIs mensuales y tendencias) y otro para la gerencia (costos y confiabilidad).
+</Tip>
+
+<Tip>
+  El **Pareto de activos** es uno de los gráficos más accionables: te dice exactamente en qué equipos enfocarte para reducir el 80% de las fallas con el menor esfuerzo.
+</Tip>

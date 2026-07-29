@@ -1,8 +1,81 @@
 ---
 title: Inventario
-description: Próximamente
+description: Catálogo de repuestos y materiales con trazabilidad de uso en órdenes de mantenimiento.
 ---
 
-# Inventario
+## ¿Qué es el Inventario en Pulse?
 
-Contenido en construcción.
+El inventario de Pulse es el catálogo de repuestos, materiales e insumos que se consumen en las órdenes de mantenimiento. Cada ítem tiene definido su stock mínimo y máximo, su costo unitario y los activos con los que se relaciona.
+
+Cuando un técnico registra el uso de un material en una orden, el sistema registra el consumo con su lote y cantidad, dando trazabilidad completa de qué se usó, en qué orden y en qué fecha.
+
+{/* TODO: screenshot — lista de materiales del inventario */}
+
+## Crear una definición de material
+
+<Steps>
+  <Step title="Ir a Gestión de Inventario > Inventario">
+    Hacé clic en **Nuevo material**.
+  </Step>
+  <Step title="Identificación">
+    Ingresá código, nombre y clase del material.
+  </Step>
+  <Step title="Unidad de medida y costo">
+    Seleccioná la unidad de medida y el costo unitario.
+  </Step>
+  <Step title="Proveedor">
+    Ingresá proveedor y número de parte del proveedor (útil para pedidos de reposición).
+  </Step>
+  <Step title="Stock mínimo y máximo">
+    Definí los límites de stock para recibir alertas cuando el inventario está bajo.
+  </Step>
+  <Step title="Activos relacionados">
+    Vinculá los activos que usan este material. Esto permite saber qué repuestos necesita cada equipo.
+  </Step>
+  <Step title="Marcar como crítico (si aplica)">
+    Los materiales críticos son aquellos cuya falta puede detener la producción.
+  </Step>
+  <Step title="Guardar">
+    El material queda disponible para agregar a órdenes de mantenimiento.
+  </Step>
+</Steps>
+
+## Campos del material
+
+| Campo | Descripción |
+|---|---|
+| **Código** | Identificador interno o código de parte |
+| **Nombre** | Descripción del material |
+| **Clase** | Categoría (lubricante, filtro, rodamiento, herramienta, etc.) |
+| **Unidad de medida** | Litros, unidades, metros, kg, etc. |
+| **Costo unitario** | Precio por unidad para calcular costos de mantenimiento |
+| **Proveedor** | Proveedor habitual del material |
+| **N° de parte proveedor** | Código del proveedor para facilitar pedidos |
+| **Stock mínimo** | Cantidad mínima antes de necesitar reponer |
+| **Stock máximo** | Capacidad máxima de almacenamiento |
+| **Es crítico** | Si su falta puede detener la operación |
+| **Activos relacionados** | Equipos que usan este material |
+| **Descripción** | Notas adicionales sobre el material |
+
+## Historial de uso (Actuals)
+
+Desde la pestaña **Actuals** en el detalle de un material podés ver el historial completo de consumo: qué órdenes lo usaron, en qué cantidad, con qué lote y en qué fecha. Esto es fundamental para auditorías y para calcular el consumo promedio.
+
+{/* TODO: screenshot — tab Actuals con historial de uso */}
+
+## Importar y exportar
+
+- **Importar**: subí un archivo XLSX con tu catálogo de materiales. Descargá la plantilla desde el botón **Importar** para ver el formato requerido.
+- **Exportar**: descargá el catálogo completo en XLSX para análisis externo o respaldo.
+
+<Tip>
+  Cargá los materiales antes de empezar a crear órdenes. Así los técnicos pueden seleccionarlos directamente al registrar el consumo.
+</Tip>
+
+<Tip>
+  Usá el campo **Activos relacionados** para saber rápidamente qué repuestos necesita un equipo antes de realizar un mantenimiento.
+</Tip>
+
+<Note>
+  El inventario en Pulse registra el consumo pero no gestiona stock en tiempo real (entradas, ajustes de inventario). Para gestión de stock completa, integrá con tu sistema ERP.
+</Note>

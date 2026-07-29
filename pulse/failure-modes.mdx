@@ -1,8 +1,50 @@
 ---
 title: Modos de Falla
-description: Catálogo de fallas por tipo de activo
+description: Tipos y causas de falla usados en órdenes correctivas y análisis de confiabilidad.
 ---
 
-# Modos de Falla
+## ¿Qué son los Modos de Falla?
 
-Los modos de falla son un catálogo de tipos de falla asociados a cada clase de activo. Permiten clasificar las órdenes de trabajo correctivo para análisis de confiabilidad.
+Los modos de falla son clasificaciones estándar que se registran en las órdenes de mantenimiento correctivas para documentar **qué falló** y **por qué falló**. Esta información alimenta los dashboards de análisis de fallas y permite identificar patrones repetitivos.
+
+No son un módulo CRUD separado — se configuran como campos en la [orden de mantenimiento](/pulse/maintenance-orders) al momento de crearla o finalizarla.
+
+## Tipo de falla
+
+El tipo de falla describe el **sistema o componente** que falló:
+
+| Tipo | Descripción |
+|---|---|
+| **Mecánica** | Falla en componentes mecánicos: engranajes, rodamientos, ejes, correas |
+| **Eléctrica** | Falla en el sistema eléctrico: motor, cableado, tablero, contactores |
+| **Neumática** | Falla en sistemas de aire comprimido: válvulas, cilindros, tuberías |
+| **Hidráulica** | Falla en sistemas hidráulicos: bombas, cilindros, mangueras, válvulas |
+| **Control** | Falla en sistemas de control: PLC, sensores, HMI, comunicaciones |
+| **Electrónica** | Falla en componentes electrónicos: variadores, fuentes, tarjetas |
+| **Electro-control** | Falla combinada eléctrica y de control |
+| **Estructural** | Falla en estructura o soporte: fisuras, deformaciones, corrosión |
+| **Otra** | Falla que no encaja en las categorías anteriores |
+| **Desconocida** | No se pudo determinar el tipo de falla |
+
+## Causa de falla
+
+La causa de falla describe **por qué** ocurrió la falla (desgaste normal, mal uso, falta de mantenimiento, etc.).
+
+## Cómo se usan en los dashboards
+
+Los dashboards de Pulse incluyen gráficos específicos de análisis de fallas:
+
+- **Fallas por tipo** — gráfico que muestra qué sistemas fallan más (mecánico, eléctrico, etc.)
+- **Fallas por causa** — distribución de causas raíz
+- **Top activos correctivos** — ranking de equipos con más órdenes correctivas
+- **Tendencia de fallas** — evolución semanal/mensual de fallas
+
+{/* TODO: screenshot — gráfico de fallas por tipo en el dashboard */}
+
+<Tip>
+  Registrá siempre el tipo y causa de falla en las órdenes correctivas. Sin esta información, los análisis de confiabilidad pierden precisión y no podés identificar fallas recurrentes para atacarlas con mantenimiento preventivo.
+</Tip>
+
+<Note>
+  Si una falla es realmente desconocida al momento de crear la orden, podés dejar el campo en "Desconocida" y actualizarlo al cerrar la orden una vez identificada la causa raíz.
+</Note>

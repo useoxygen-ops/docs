@@ -1,8 +1,37 @@
 ---
 title: Árbol Jerárquico
-description: Próximamente
+description: Visualizá la estructura completa de ubicaciones y activos de tu planta en un árbol navegable.
 ---
 
-# Árbol Jerárquico
+## ¿Qué es el Árbol Jerárquico?
 
-Contenido en construcción.
+El árbol jerárquico es una vista de solo lectura que muestra la estructura completa de tu planta: las [ubicaciones](/pulse/locations) como nodos principales y los [activos](/pulse/assets) dentro de cada una, organizados en su jerarquía padre-hijo.
+
+Es útil para:
+- Entender de un vistazo cómo está organizada la planta
+- Navegar rápidamente hasta un activo o ubicación específica
+- Verificar que la jerarquía está configurada correctamente
+
+{/* TODO: screenshot — vista del árbol jerárquico completo */}
+
+## Cómo usarlo
+
+El árbol se expande y contrae por niveles. Hacé clic en cualquier nodo para expandir sus elementos hijos.
+
+La estructura típica es:
+
+```
+Planta
+└── Línea de producción / Sector
+    └── Puesto de trabajo / Celda
+        └── Equipo (activo)
+            └── Sub-componente (activo hijo)
+```
+
+<Note>
+  Para modificar la jerarquía, usá los módulos de [Ubicaciones](/pulse/locations) y [Activos](/pulse/assets). El árbol jerárquico es solo una vista de consulta.
+</Note>
+
+<Tip>
+  Antes de cargar activos y órdenes, configurá la jerarquía de ubicaciones. Una buena estructura facilita filtrar, reportar y asignar trabajo por sector.
+</Tip>

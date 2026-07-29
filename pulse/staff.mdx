@@ -1,8 +1,74 @@
 ---
 title: Personal
-description: Próximamente
+description: Registrá los técnicos y operarios con sus horarios, costo por hora y pertenencia a equipos.
 ---
 
-# Personal
+## ¿Qué es el Personal en Pulse?
 
-Contenido en construcción.
+El personal son las personas que ejecutan el trabajo de mantenimiento: técnicos, operarios, electricistas, mecánicos. Cada persona tiene definido su horario de trabajo y su costo por hora, lo que permite calcular el costo real de cada orden de mantenimiento.
+
+Una persona puede estar vinculada a una cuenta de usuario del sistema para que pueda iniciar sesión y gestionar sus propias órdenes.
+
+{/* TODO: screenshot — lista de personal */}
+
+## Crear una persona
+
+<Steps>
+  <Step title="Ir a Gestión de Personal > Personal">
+    Hacé clic en **Nuevo técnico**.
+  </Step>
+  <Step title="Datos personales">
+    Ingresá nombre y, opcionalmente, vinculá a un usuario del sistema.
+  </Step>
+  <Step title="Costo por hora">
+    Definí el costo por hora de esta persona. Se usa para calcular el costo de mano de obra en cada orden.
+  </Step>
+  <Step title="Tipo de horario">
+    Elegí entre horario fijo o horario rotativo.
+  </Step>
+  <Step title="Configurar el horario">
+    Definí los días y horarios de trabajo según el tipo seleccionado.
+  </Step>
+  <Step title="Asignar a equipos (opcional)">
+    Asigná la persona a uno o más [equipos](/pulse/teams).
+  </Step>
+  <Step title="Guardar">
+    La persona queda disponible para asignar en órdenes de mantenimiento.
+  </Step>
+</Steps>
+
+## Tipos de horario
+
+### Horario fijo
+La persona trabaja los mismos días y horas cada semana. Configurás por cada día de la semana si trabaja o no, y el horario de inicio y fin.
+
+**Ejemplo:** Lunes a viernes de 8:00 a 17:00.
+
+### Horario rotativo
+La persona trabaja en ciclos que se repiten. Configurás cuántos días dura el ciclo y los horarios de cada día del ciclo.
+
+**Ejemplo:** Turno rotativo de 3 días: día 1 mañana, día 2 tarde, día 3 noche, día 4 descanso.
+
+El horario se usa en la [vista Workload](/pulse/maintenance-orders#vista-workload) para mostrar la disponibilidad real de cada técnico.
+
+## Campos del personal
+
+| Campo | Descripción |
+|---|---|
+| **Nombre** | Nombre completo del técnico |
+| **Usuario vinculado** | Cuenta de usuario del sistema (opcional) |
+| **Costo por hora** | Para cálculo de costos de mano de obra |
+| **Tipo de horario** | Fijo o rotativo |
+| **Horario semanal** | Días y horas de trabajo (para horario fijo) |
+| **Ciclo rotativo** | Configuración del ciclo (para horario rotativo) |
+| **Equipos** | Equipos a los que pertenece |
+| **Propiedades personalizadas** | Campos adicionales configurados para tu empresa |
+
+## Importar y exportar
+
+- **Importar**: cargá múltiples personas desde un archivo XLSX. Descargá la plantilla para ver el formato.
+- **Exportar**: descargá la lista de personal en XLSX.
+
+<Tip>
+  Configurar correctamente el horario del personal es clave para que la vista Workload muestre la capacidad real disponible y puedas planificar sin sobrecargar a ningún técnico.
+</Tip>

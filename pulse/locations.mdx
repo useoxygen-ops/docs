@@ -1,8 +1,73 @@
 ---
 title: Ubicaciones
-description: Próximamente
+description: Definí la estructura física de tu planta para organizar activos y órdenes de mantenimiento.
 ---
 
-# Ubicaciones
+## ¿Qué es una Ubicación?
 
-Contenido en construcción.
+Una ubicación representa un lugar físico dentro de tu instalación: una planta, un edificio, una línea de producción, un sector, un puesto de trabajo. Las ubicaciones se organizan en jerarquía para reflejar la estructura real de la operación.
+
+Los activos se asignan a ubicaciones, y las órdenes de mantenimiento también. Esto te permite filtrar y reportar el trabajo por área geográfica de tu planta.
+
+{/* TODO: screenshot — lista de ubicaciones */}
+
+## Jerarquía de ubicaciones
+
+Las ubicaciones pueden tener sub-ubicaciones, creando un árbol de la planta:
+
+```
+Planta Principal
+├── Línea 1
+│   ├── Sector A
+│   └── Sector B
+└── Línea 2
+    └── Almacén
+```
+
+## Crear una ubicación
+
+<Steps>
+  <Step title="Ir a Gestión de Activos > Ubicaciones">
+    Hacé clic en **Nueva ubicación**.
+  </Step>
+  <Step title="Completar los datos">
+    Ingresá código, nombre y tipo de ubicación.
+  </Step>
+  <Step title="Asignar ubicación padre (opcional)">
+    Si es una sub-ubicación, seleccioná la ubicación padre correspondiente.
+  </Step>
+  <Step title="Campos personalizados (opcional)">
+    Si necesitás atributos adicionales (ej. superficie, turno de operación), completalos en la sección de campos personalizados.
+  </Step>
+  <Step title="Guardar">
+    La ubicación queda disponible para asignarla a activos y órdenes.
+  </Step>
+</Steps>
+
+## Campos de la ubicación
+
+| Campo | Descripción |
+|---|---|
+| **Código** | Identificador corto (ej. L1-A, PLANTA-01) |
+| **Nombre** | Nombre descriptivo |
+| **Tipo** | Planta, línea, sector, puesto, etc. |
+| **Ubicación padre** | Para armar la jerarquía |
+| **Campos personalizados** | Atributos adicionales |
+
+## Detalle de una ubicación
+
+Desde el detalle de una ubicación podés ver:
+
+- **Vista general** — datos de la ubicación y campos personalizados
+- **Activos** — listado de todos los activos asignados a esa ubicación
+- **Sub-ubicaciones** — las ubicaciones hijas directas
+
+{/* TODO: screenshot — detalle de ubicación con sus activos */}
+
+<Tip>
+  Empezá por los niveles más altos (planta, línea) antes de crear los sectores y puestos. Es más fácil armar la jerarquía de arriba hacia abajo.
+</Tip>
+
+<Note>
+  Una ubicación bien definida te permite filtrar todas las órdenes, activos y KPIs por área de la planta en los dashboards.
+</Note>
