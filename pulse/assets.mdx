@@ -1,0 +1,24 @@
+---
+title: Activos
+description: Gestiona la jerarquía de activos industriales
+---
+
+# Activos
+
+Los activos representan el equipamiento físico de tu planta organizado en una jerarquía estándar ISA-95.
+
+## Jerarquía
+
+```
+Site (Planta)
+└── Área
+    └── Centro de Trabajo
+        └── Unidad de Trabajo
+            └── Equipo
+```
+
+Cada nivel hereda la configuración de su padre, incluyendo campos personalizados y responsables asignados.
+
+## Campos personalizados
+
+Puedes agregar campos personalizados a cualquier nivel de la jerarquía. Los niveles hijos heredan automáticamente los campos del padre.

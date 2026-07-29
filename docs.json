@@ -1,38 +1,20 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Oxygen Suite",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#122D4A",
+    "light": "#1e4a7a",
+    "dark": "#0a1e30"
+  },
+  "background": {
+    "light": "#ffffff"
+  },
+  "modeToggle": {
+    "default": "light",
+    "isHidden": true
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
@@ -40,33 +22,177 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Soporte",
+        "href": "mailto:soporte@oxygen.tech"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Ir a la app",
+      "href": "https://suite.oxygen.tech"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Pulse",
+        "groups": [
+          {
+            "group": " ",
+            "pages": [
+              "pulse/overview",
+              "pulse/dashboards"
+            ]
+          },
+          {
+            "group": "Gestión de Mantenimiento",
+            "pages": [
+              "pulse/preventive-plans",
+              "pulse/maintenance-orders",
+              "pulse/maintenance-requests",
+              "pulse/task-groups"
+            ]
+          },
+          {
+            "group": "Gestión de Activos",
+            "pages": [
+              "pulse/asset-tree",
+              "pulse/assets",
+              "pulse/locations"
+            ]
+          },
+          {
+            "group": "Gestión de Inventario",
+            "pages": [
+              "pulse/inventory"
+            ]
+          },
+          {
+            "group": "Gestión de Personal",
+            "pages": [
+              "pulse/staff",
+              "pulse/teams"
+            ]
+          },
+          {
+            "group": "Configuración",
+            "pages": [
+              "pulse/units",
+              "pulse/failure-modes"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Planner",
+        "groups": [
+          {
+            "group": " ",
+            "pages": [
+              "planner/overview",
+              "planner/dashboard",
+              "planner/scheduling",
+              "planner/wip-control"
+            ]
+          },
+          {
+            "group": "Planificación",
+            "pages": [
+              "planner/master-plan",
+              "planner/production-orders"
+            ]
+          },
+          {
+            "group": "Gestión de Capacidad",
+            "pages": [
+              "planner/equipment-availability",
+              "planner/equipment-calendars"
+            ]
+          },
+          {
+            "group": "Configuración de Recursos",
+            "pages": [
+              "planner/production-processes",
+              "planner/manufacturing-routes",
+              "planner/equipment-management",
+              "planner/plant-hierarchy",
+              "planner/grouping-levels",
+              "planner/process-stages",
+              "planner/data-import"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Control Center",
+        "groups": [
+          {
+            "group": " ",
+            "pages": [
+              "control-center/overview"
+            ]
+          },
+          {
+            "group": "Gestión de Usuarios",
+            "pages": [
+              "control-center/roles",
+              "control-center/users"
+            ]
+          },
+          {
+            "group": "Configuración",
+            "pages": [
+              "control-center/users-roles",
+              "control-center/company-config"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": " ",
+            "pages": [
+              "changelog/index"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": []
     }
   },
   "contextual": {
     "options": [
       "copy",
       "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "claude"
     ]
+  },
+  "locale": "es",
+  "i18n": {
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "onThisPage": "En esta página",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar documentación...",
+    "backToTop": "Volver arriba",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "lastUpdated": "Última actualización",
+    "editPage": "Editar esta página",
+    "caution": "Precaución",
+    "warning": "Advertencia",
+    "note": "Nota",
+    "tip": "Consejo",
+    "info": "Información"
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://oxygen.tech",
+      "linkedin": "https://www.linkedin.com/company/oxygen-cl"
     }
   }
 }
