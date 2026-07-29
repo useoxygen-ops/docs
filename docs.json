@@ -194,5 +194,8 @@
       "website": "https://oxygen.tech",
       "linkedin": "https://www.linkedin.com/company/oxygen-cl"
     }
+  },
+  "markdown": {
+    "schema": true
   }
 }
