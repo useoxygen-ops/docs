@@ -11,110 +11,122 @@ Esto elimina el riesgo de olvidar un mantenimiento programado y garantiza que lo
 
 {/* TODO: screenshot — lista de planes preventivos */}
 
-## Tipos de disparadores
+<Tabs>
+  <Tab title="Creación">
 
-El disparador define **cuándo** se genera una nueva orden.
+    ## Tipos de disparadores
 
-### Por calendario
+    El disparador define **cuándo** se genera una nueva orden.
 
-Genera órdenes según una frecuencia fija en el tiempo.
+    ### Por calendario
 
-**Ejemplos:**
-- Cambio de aceite cada 30 días
-- Revisión de filtros cada 3 meses
-- Lubricación semanal todos los lunes
+    Genera órdenes según una frecuencia fija en el tiempo.
 
-Configuras la frecuencia (cada X días, semanas o meses) y con cuántos días de anticipación se debe crear la orden para que haya tiempo de planificarla.
+    **Ejemplos:**
+    - Cambio de aceite cada 30 días
+    - Revisión de filtros cada 3 meses
+    - Lubricación semanal todos los lunes
 
-### Por uso
+    Configuras la frecuencia (cada X días, semanas o meses) y con cuántos días de anticipación se debe crear la orden para que haya tiempo de planificarla.
 
-Genera una orden cuando un parámetro del activo alcanza un valor acumulado.
+    ### Por uso
 
-**Ejemplos:**
-- Mantenimiento cada 500 horas de operación
-- Cambio de rodamiento cada 10,000 ciclos
-- Revisión cada 50,000 unidades producidas
+    Genera una orden cuando un parámetro del activo alcanza un valor acumulado.
 
-Requiere que el activo tenga un [parámetro](/pulse/assets#parámetros-del-activo) con lecturas registradas. El plan monitorea el valor acumulado y genera la orden cuando se alcanza el umbral.
+    **Ejemplos:**
+    - Mantenimiento cada 500 horas de operación
+    - Cambio de rodamiento cada 10,000 ciclos
+    - Revisión cada 50,000 unidades producidas
 
-### Por condición
+    Requiere que el activo tenga un [parámetro](/pulse/assets#parámetros-del-activo) con lecturas registradas. El plan monitorea el valor acumulado y genera la orden cuando se alcanza el umbral.
 
-Genera una orden cuando un parámetro del activo sale de un rango aceptable.
+    ### Por condición
 
-**Ejemplos:**
-- Temperatura de rodamiento supera 80°C
-- Presión de aceite cae por debajo de 2 bar
-- Vibración supera el límite máximo
+    Genera una orden cuando un parámetro del activo sale de un rango aceptable.
 
-Configuras los valores mínimo y máximo aceptables. Si el parámetro cruza esos límites, se genera automáticamente una orden correctiva o de inspección.
+    **Ejemplos:**
+    - Temperatura de rodamiento supera 80°C
+    - Presión de aceite cae por debajo de 2 bar
+    - Vibración supera el límite máximo
 
-{/* TODO: screenshot — selector de tipo de disparador */}
+    Configuras los valores mínimo y máximo aceptables. Si el parámetro cruza esos límites, se genera automáticamente una orden correctiva o de inspección.
 
-## Crear un plan preventivo
+    {/* TODO: screenshot — selector de tipo de disparador */}
 
-<Steps>
-  <Step title="Ir a Gestión de Mantenimiento > Planes Preventivos">
-    Haz clic en **Nuevo plan**.
-  </Step>
-  <Step title="Datos generales">
-    Completa nombre, código, descripción y prioridad del plan.
-  </Step>
-  <Step title="Seleccionar activo">
-    Asigna el activo que recibirá el mantenimiento. El plan queda vinculado a ese activo.
-  </Step>
-  <Step title="Configurar el disparador">
-    Elige el tipo (calendario, uso o condición) y completa los parámetros correspondientes.
-  </Step>
-  <Step title="Agregar tareas">
-    Define el checklist de trabajo. Puedes importar desde un [Grupo de Tareas](/pulse/task-groups) o escribirlas manualmente.
-  </Step>
-  <Step title="Asignar responsables">
-    Asigna los técnicos o equipos que ejecutarán las órdenes generadas.
-  </Step>
-  <Step title="Activar el plan">
-    Activa el plan a **Activo**. A partir de ese momento, Pulse monitorea el disparador y genera órdenes automáticamente.
-  </Step>
-</Steps>
+    ## Crear un plan preventivo
 
-## Campos del plan
+    <Steps>
+      <Step title="Ir a Gestión de Mantenimiento > Planes Preventivos">
+        Haz clic en **Nuevo plan**.
+      </Step>
+      <Step title="Datos generales">
+        Completa nombre, código, descripción y prioridad del plan.
+      </Step>
+      <Step title="Seleccionar activo">
+        Asigna el activo que recibirá el mantenimiento. El plan queda vinculado a ese activo.
+      </Step>
+      <Step title="Configurar el disparador">
+        Elige el tipo (calendario, uso o condición) y completa los parámetros correspondientes.
+      </Step>
+      <Step title="Agregar tareas">
+        Define el checklist de trabajo. Puedes importar desde un [Grupo de Tareas](/pulse/task-groups) o escribirlas manualmente.
+      </Step>
+      <Step title="Asignar responsables">
+        Asigna los técnicos o equipos que ejecutarán las órdenes generadas.
+      </Step>
+      <Step title="Activar el plan">
+        Activa el plan a **Activo**. A partir de ese momento, Pulse monitorea el disparador y genera órdenes automáticamente.
+      </Step>
+    </Steps>
 
-| Campo | Descripción |
-|---|---|
-| **Nombre** | Nombre descriptivo del plan |
-| **Código** | Identificador único (ej. PM-001) |
-| **Descripción** | Detalles del mantenimiento a realizar |
-| **Prioridad** | Prioridad de las órdenes generadas |
-| **Activo** | Equipo que recibe el mantenimiento |
-| **Fecha inicio/fin** | Vigencia del plan |
-| **Tolerancia de atraso** | Días de gracia antes de considerar una orden como atrasada |
-| **Tipo de disparador** | Calendario, uso o condición |
-| **Asignados** | Técnicos o equipos responsables |
-| **Tareas** | Checklist de trabajo a incluir en cada orden generada |
-| **Sub-órdenes** | Órdenes hijas que se generan junto con la principal |
-| **Activo/Inactivo** | Si el plan está generando órdenes o pausado |
+    ## Campos del plan
 
-## Vista Gantt
+    | Campo | Descripción |
+    |---|---|
+    | **Nombre** | Nombre descriptivo del plan |
+    | **Código** | Identificador único (ej. PM-001) |
+    | **Descripción** | Detalles del mantenimiento a realizar |
+    | **Prioridad** | Prioridad de las órdenes generadas |
+    | **Activo** | Equipo que recibe el mantenimiento |
+    | **Fecha inicio/fin** | Vigencia del plan |
+    | **Tolerancia de atraso** | Días de gracia antes de considerar una orden como atrasada |
+    | **Tipo de disparador** | Calendario, uso o condición |
+    | **Asignados** | Técnicos o equipos responsables |
+    | **Tareas** | Checklist de trabajo a incluir en cada orden generada |
+    | **Sub-órdenes** | Órdenes hijas que se generan junto con la principal |
+    | **Activo/Inactivo** | Si el plan está generando órdenes o pausado |
 
-La vista Gantt muestra todos los planes activos en una línea de tiempo, con las órdenes generadas y las próximas proyectadas. Es útil para visualizar la carga de mantenimiento preventivo en el tiempo y detectar solapamientos.
+  </Tab>
+  <Tab title="Importar">
 
-{/* TODO: screenshot — vista Gantt de planes preventivos */}
+    ## Importar planes
 
-## Importar planes
+    Puedes importar múltiples planes preventivos desde un archivo XLSX usando la opción **Importar** en la lista de planes. Descarga la plantilla, complétala y súbela.
 
-Puedes importar múltiples planes preventivos desde un archivo XLSX usando la opción **Importar** en la lista de planes. Descarga la plantilla, complétala y súbela.
+  </Tab>
+  <Tab title="Vista Gantt">
 
-## Órdenes generadas
+    ## Vista Gantt
 
-Desde la pestaña **Órdenes** dentro de un plan puedes ver todas las órdenes que generó ese plan, con su estado actual. Si una orden está atrasada (no se completó dentro del período esperado), aparece marcada.
+    La vista Gantt muestra todos los planes activos en una línea de tiempo, con las órdenes generadas y las próximas proyectadas. Es útil para visualizar la carga de mantenimiento preventivo en el tiempo y detectar solapamientos.
 
-<Tip>
-  Configura la **tolerancia de atraso** según la criticidad del equipo. Un compresor crítico puede tener 0 días de tolerancia; un equipo auxiliar puede tener 7 días.
-</Tip>
+    {/* TODO: screenshot — vista Gantt de planes preventivos */}
 
-<Tip>
-  Para planes por uso, asegúrate de que los técnicos registren lecturas de parámetros regularmente. Sin lecturas actualizadas, el sistema no puede detectar cuándo disparar la orden.
-</Tip>
+    ## Órdenes generadas
 
-<Note>
-  Un plan inactivo no genera nuevas órdenes, pero las órdenes ya generadas siguen su ciclo de vida normalmente.
-</Note>
+    Desde la pestaña **Órdenes** dentro de un plan puedes ver todas las órdenes que generó ese plan, con su estado actual. Si una orden está atrasada (no se completó dentro del período esperado), aparece marcada.
+
+    <Tip>
+      Configura la **tolerancia de atraso** según la criticidad del equipo. Un compresor crítico puede tener 0 días de tolerancia; un equipo auxiliar puede tener 7 días.
+    </Tip>
+
+    <Tip>
+      Para planes por uso, asegúrate de que los técnicos registren lecturas de parámetros regularmente. Sin lecturas actualizadas, el sistema no puede detectar cuándo disparar la orden.
+    </Tip>
+
+    <Note>
+      Un plan inactivo no genera nuevas órdenes, pero las órdenes ya generadas siguen su ciclo de vida normalmente.
+    </Note>
+
+  </Tab>
+</Tabs>
