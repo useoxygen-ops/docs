@@ -4,11 +4,12 @@
   "name": "Oxygen Suite",
   "colors": {
     "primary": "#122D4A",
-    "light": "#1e4a7a",
+    "light": "#ffffff",
     "dark": "#0a1e30"
   },
   "background": {
-    "light": "#ffffff"
+    "light": "#ffffff",
+    "dark": "#0a0a0a"
   },
   "modeToggle": {
     "default": "light",
