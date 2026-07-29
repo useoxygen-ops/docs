@@ -1,11 +1,11 @@
 ---
 title: Planes Preventivos
-description: Automatizá la generación de órdenes de mantenimiento por calendario, uso acumulado o condición del activo.
+description: Automatiza la generación de órdenes de mantenimiento por calendario, uso acumulado o condición del activo.
 ---
 
 ## ¿Qué es un Plan Preventivo?
 
-Un plan preventivo es una regla que genera órdenes de mantenimiento automáticamente, sin intervención manual. Definís cuándo y cómo se debe hacer el trabajo, y Pulse se encarga de crear las órdenes en el momento correcto.
+Un plan preventivo es una regla que genera órdenes de mantenimiento automáticamente, sin intervención manual. Defines cuándo y cómo se debe hacer el trabajo, y Pulse se encarga de crear las órdenes en el momento correcto.
 
 Esto elimina el riesgo de olvidar un mantenimiento programado y garantiza que los equipos reciban atención antes de que fallen.
 
@@ -24,7 +24,7 @@ Genera órdenes según una frecuencia fija en el tiempo.
 - Revisión de filtros cada 3 meses
 - Lubricación semanal todos los lunes
 
-Configurás la frecuencia (cada X días, semanas o meses) y con cuántos días de anticipación se debe crear la orden para que haya tiempo de planificarla.
+Configuras la frecuencia (cada X días, semanas o meses) y con cuántos días de anticipación se debe crear la orden para que haya tiempo de planificarla.
 
 ### Por uso
 
@@ -46,7 +46,7 @@ Genera una orden cuando un parámetro del activo sale de un rango aceptable.
 - Presión de aceite cae por debajo de 2 bar
 - Vibración supera el límite máximo
 
-Configurás los valores mínimo y máximo aceptables. Si el parámetro cruza esos límites, se genera automáticamente una orden correctiva o de inspección.
+Configuras los valores mínimo y máximo aceptables. Si el parámetro cruza esos límites, se genera automáticamente una orden correctiva o de inspección.
 
 {/* TODO: screenshot — selector de tipo de disparador */}
 
@@ -54,25 +54,25 @@ Configurás los valores mínimo y máximo aceptables. Si el parámetro cruza eso
 
 <Steps>
   <Step title="Ir a Gestión de Mantenimiento > Planes Preventivos">
-    Hacé clic en **Nuevo plan**.
+    Haz clic en **Nuevo plan**.
   </Step>
   <Step title="Datos generales">
-    Completá nombre, código, descripción y prioridad del plan.
+    Completa nombre, código, descripción y prioridad del plan.
   </Step>
   <Step title="Seleccionar activo">
-    Asigná el activo que recibirá el mantenimiento. El plan queda vinculado a ese activo.
+    Asigna el activo que recibirá el mantenimiento. El plan queda vinculado a ese activo.
   </Step>
   <Step title="Configurar el disparador">
-    Elegí el tipo (calendario, uso o condición) y completá los parámetros correspondientes.
+    Elige el tipo (calendario, uso o condición) y completa los parámetros correspondientes.
   </Step>
   <Step title="Agregar tareas">
-    Definí el checklist de trabajo. Podés importar desde un [Grupo de Tareas](/pulse/task-groups) o escribirlas manualmente.
+    Define el checklist de trabajo. Puedes importar desde un [Grupo de Tareas](/pulse/task-groups) o escribirlas manualmente.
   </Step>
   <Step title="Asignar responsables">
-    Asigná los técnicos o equipos que ejecutarán las órdenes generadas.
+    Asigna los técnicos o equipos que ejecutarán las órdenes generadas.
   </Step>
   <Step title="Activar el plan">
-    Toggleá el plan a **Activo**. A partir de ese momento, Pulse monitorea el disparador y genera órdenes automáticamente.
+    Activa el plan a **Activo**. A partir de ese momento, Pulse monitorea el disparador y genera órdenes automáticamente.
   </Step>
 </Steps>
 
@@ -101,18 +101,18 @@ La vista Gantt muestra todos los planes activos en una línea de tiempo, con las
 
 ## Importar planes
 
-Podés importar múltiples planes preventivos desde un archivo XLSX usando la opción **Importar** en la lista de planes. Descargá la plantilla, completala y subila.
+Puedes importar múltiples planes preventivos desde un archivo XLSX usando la opción **Importar** en la lista de planes. Descarga la plantilla, complétala y súbela.
 
 ## Órdenes generadas
 
-Desde la pestaña **Órdenes** dentro de un plan podés ver todas las órdenes que generó ese plan, con su estado actual. Si una orden está atrasada (no se completó dentro del período esperado), aparece marcada.
+Desde la pestaña **Órdenes** dentro de un plan puedes ver todas las órdenes que generó ese plan, con su estado actual. Si una orden está atrasada (no se completó dentro del período esperado), aparece marcada.
 
 <Tip>
-  Configurá la **tolerancia de atraso** según la criticidad del equipo. Un compresor crítico puede tener 0 días de tolerancia; un equipo auxiliar puede tener 7 días.
+  Configura la **tolerancia de atraso** según la criticidad del equipo. Un compresor crítico puede tener 0 días de tolerancia; un equipo auxiliar puede tener 7 días.
 </Tip>
 
 <Tip>
-  Para planes por uso, asegurate de que los técnicos registren lecturas de parámetros regularmente. Sin lecturas actualizadas, el sistema no puede detectar cuándo disparar la orden.
+  Para planes por uso, asegúrate de que los técnicos registren lecturas de parámetros regularmente. Sin lecturas actualizadas, el sistema no puede detectar cuándo disparar la orden.
 </Tip>
 
 <Note>

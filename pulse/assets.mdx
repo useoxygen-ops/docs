@@ -7,7 +7,7 @@ description: Registrá y gestioná los equipos de tu planta con jerarquía, par�
 
 Un activo es cualquier equipo, máquina o instalación que requiere mantenimiento. En Pulse, cada activo tiene su propio historial de órdenes, indicadores de confiabilidad, parámetros medibles y documentación adjunta.
 
-Podés organizar los activos en una jerarquía (activo padre → hijo → nieto) que refleja la estructura real de tu planta.
+Puedes organizar los activos en una jerarquía (activo padre → hijo → nieto) que refleja la estructura real de tu planta.
 
 {/* TODO: screenshot — lista de activos */}
 
@@ -15,19 +15,19 @@ Podés organizar los activos en una jerarquía (activo padre → hijo → nieto)
 
 <Steps>
   <Step title="Ir a Gestión de Activos > Activos">
-    Hacé clic en **Nuevo activo**.
+    Haz clic en **Nuevo activo**.
   </Step>
   <Step title="Datos de identificación">
-    Completá nombre, fabricante, modelo y número de serie.
+    Completa nombre, fabricante, modelo y número de serie.
   </Step>
   <Step title="Clasificación">
-    Asigná tipo, criticidad y estado operativo actual del activo.
+    Asigna tipo, criticidad y estado operativo actual del activo.
   </Step>
   <Step title="Ubicación y jerarquía">
-    Asigná la ubicación física y, si corresponde, el activo padre (para crear la jerarquía).
+    Asigna la ubicación física y, si corresponde, el activo padre (para crear la jerarquía).
   </Step>
   <Step title="Fecha de instalación">
-    Registrá cuándo fue instalado el equipo. Es útil para calcular antigüedad y planificar reemplazos.
+    Registra cuándo fue instalado el equipo. Es útil para calcular antigüedad y planificar reemplazos.
   </Step>
   <Step title="Propiedades personalizadas">
     Si tu tipo de activo tiene campos específicos (potencia, voltaje, presión máxima, etc.), completalos en la sección de propiedades de clase.
@@ -80,9 +80,9 @@ La pestaña **Indicadores** muestra métricas de confiabilidad calculadas autom�
 | **Horas de mantenimiento** | Total de horas trabajadas en el activo en el período |
 | **Cantidad de órdenes** | Número de órdenes ejecutadas |
 | **Cumplimiento preventivo** | % de planes preventivos completados a tiempo |
-| **Costo de repuestos** | Total de materiales utilizados (si tenés permisos para ver costos) |
+| **Costo de repuestos** | Total de materiales utilizados (si tienes permisos para ver costos) |
 
-Podés filtrar los indicadores por rango de fechas.
+Puedes filtrar los indicadores por rango de fechas.
 
 {/* TODO: screenshot — tab de indicadores KPI de un activo */}
 
@@ -99,14 +99,14 @@ Desde el detalle del activo, pestaña **Parámetros** > **Nuevo parámetro**:
 | Campo | Descripción |
 |---|---|
 | **Nombre** | Ej. "Temperatura de rodamiento", "Horas de operación" |
-| **Unidad de medida** | Seleccioná del catálogo de [unidades](/pulse/units) |
+| **Unidad de medida** | Selecciona del catálogo de [unidades](/pulse/units) |
 | **Valor ideal** | El valor óptimo de operación |
 | **Valor mínimo** | Límite inferior aceptable |
 | **Valor máximo** | Límite superior aceptable |
 
 ### Registrar lecturas
 
-Desde el detalle del parámetro podés ingresar lecturas manuales. Cada lectura queda registrada con fecha y hora. El gráfico histórico muestra la evolución del valor en el tiempo y marca visualmente si está dentro o fuera del rango aceptable.
+Desde el detalle del parámetro puedes ingresar lecturas manuales. Cada lectura queda registrada con fecha y hora. El gráfico histórico muestra la evolución del valor en el tiempo y marca visualmente si está dentro o fuera del rango aceptable.
 
 {/* TODO: screenshot — gráfico histórico de lecturas de un parámetro */}
 
@@ -114,16 +114,16 @@ Desde el detalle del parámetro podés ingresar lecturas manuales. Cada lectura 
 
 Las propiedades de clase son campos personalizados que se asocian a un tipo de activo. Por ejemplo, los compresores pueden tener: presión máxima, caudal nominal, tipo de refrigeración.
 
-Para configurarlas: desde el detalle de un activo > **Campos personalizados** > definí los campos para ese tipo.
+Para configurarlas: desde el detalle de un activo > **Campos personalizados** > define los campos para ese tipo.
 
 ## Pestaña Spare Parts
 
-Desde la pestaña **Spare Parts** podés ver qué materiales del inventario están vinculados a ese activo y consultar el historial de uso.
+Desde la pestaña **Spare Parts** puedes ver qué materiales del inventario están vinculados a ese activo y consultar el historial de uso.
 
 <Tip>
-  Asigná la **criticidad** correctamente desde el inicio. Los dashboards y rankings de MTBF usan este campo para priorizar en qué activos enfocarse.
+  Asigna la **criticidad** correctamente desde el inicio. Los dashboards y rankings de MTBF usan este campo para priorizar en qué activos enfocarse.
 </Tip>
 
 <Tip>
-  Si tenés equipos con muchos sub-componentes, usá la jerarquía de activos. Podrás ver el historial de mantenimiento por componente individual y no solo por equipo completo.
+  Si tienes equipos con muchos sub-componentes, usa la jerarquía de activos. Podrás ver el historial de mantenimiento por componente individual y no solo por equipo completo.
 </Tip>
